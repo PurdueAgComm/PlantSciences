@@ -13,6 +13,11 @@ Version:        0.1.0
   width: 100%;
 }
 
+.proofPoint {
+  text-align: center;
+  padding: 30px 0;
+  color: #849E2A;
+}
 /* line 4, ../sass/_audienceContent.scss */
 .introContainer {
   position: relative;
@@ -51,7 +56,7 @@ Version:        0.1.0
   height: 60px;
 }
 /* line 34, ../sass/_audienceContent.scss */
-.introContainer .intro h1 {
+.introContainer .intro h1, .proofPoint h1 {
   z-index: 1000;
   padding: 0 0 10px 0;
   color: inherit;
@@ -67,14 +72,14 @@ Version:        0.1.0
 }
 @media (min-width: 768px) {
   /* line 50, ../sass/_audienceContent.scss */
-  .introContainer .intro h1 {
+  .introContainer .intro h1, .proofPoint h1  {
     font-size: 3.5em;
     line-height: 1em;
   }
 }
 @media (max-width: 767px) {
   /* line 56, ../sass/_audienceContent.scss */
-  .introContainer .intro h1 {
+  .introContainer .intro h1, .proofPoint h1  {
     font-size: 2.22222em;
     line-height: 1em;
   }
@@ -95,6 +100,10 @@ Version:        0.1.0
   font-size: 1em;
   font-weight: 700;
   line-height: 1.5em;
+}
+
+.content-text {
+  font-size: 1.3em;
 }
 @media (min-width: 768px) {
   /* line 77, ../sass/_audienceContent.scss */
@@ -704,4 +713,35 @@ Version:        0.1.0
 /* line 453, ../sass/_audienceContent.scss */
 .no-flexbox .linksContainer .links.num-col-4 .columnPair .columnContainer .column, .no-flexbox .linksContainer .links.num-col-3 .columnPair .columnContainer .column, .no-flexbox .linksContainer .links.num-col-2 .columnPair .columnContainer .column {
   background-color: none;
+}
+
+.meta-news {
+  font-size: 13px;
+  color: #777;
+}
+
+.news-padding-fix {
+  margin-top: -20px;
+  margin-bottom: 15px;
+}
+
+.featureNewsContainer {
+    background-image: url("https://www.purdue.edu/purdue/images/templateElements/2015/audience-newsBackground.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.newsItem {
+  background-color: #fff;
+  float: left;
+  margin: 30px 0;
+}
+
+.newsItem-Title {
+  display: block;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 15px;
+  font-family: 'Archivo Black',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin-top: -10px;
 }

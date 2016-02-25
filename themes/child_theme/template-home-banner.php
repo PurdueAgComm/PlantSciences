@@ -13,10 +13,18 @@ get_header(); ?>
     <div class="icon">
       <i class="fa fa-leaf"></i>
     </div>
-    <h1>Working together to move plant science discoveries from research to application</h1>
+    <h1>PLANT SCIENCES INITIATIVE</h1>
     <div class="divider"></div>
     <div class="content">
-      <p><span>Our mission is to be a global leader in delivering innovation, technology, and the human capacity necessary to help farming operations of all sizes produce food, fuel, and fiber more efficiently.</span></p>
+      <p class="content-text">Our mission is to be a global leader in delivering innovation, technology, and the human capacity necessary to help farming operations of all sizes produce food, fuel, and fiber more efficiently.</p>
+    </div>
+  </div>
+</div>
+
+<div class="proofPointContainer rowContainer">
+  <div class="container">
+    <div class="proofPoint row">
+      <h1>Working together to move plant science discoveries from research to application</h1>
     </div>
   </div>
 </div>
@@ -103,6 +111,86 @@ get_header(); ?>
     </div>
   </div>
 <?php endwhile; // end of the loop. ?>
+
+  <div class="featureNewsContainer rowContainer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="newsItem">
+          <h1 class="newsItem-Title">Features</h1>
+          <div class="col-xs-4">
+            <img src="http://placehold.it/170x90" class="img-responsive">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="col-xs-4">
+            <img src="http://placehold.it/170x90" class="img-responsive">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="col-xs-4">
+            <img src="http://placehold.it/170x90" class="img-responsive">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="col-xs-4">
+            <img src="http://placehold.it/170x90" class="img-responsive">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="col-xs-4">
+            <img src="http://placehold.it/170x90" class="img-responsive">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="col-xs-4">
+            <img src="http://placehold.it/170x90" class="img-responsive">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div> <!-- /.newsItem -->
+      </div> <!-- /.col-md-6-->
+      <div class="col-md-6">
+        <div class="newsItem">
+          <h1 class="newsItem-Title">News</h1>
+            <!-- One News Story -->
+            <div class="col-sm-4">
+              <img src="http://placehold.it/170x90" class="img-responsive hidden-xs">
+            </div>
+            <div class="col-sm-8">
+              <div class="news-padding-fix">
+                <a href="#"><h4>News Article Title</h4></a>
+                <span class="meta-news">Tuesday, February 2, 2016</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa nam enim obcaecati a eligendi sunt officiis unde, quasi eos omnis ipsam excepturi exercitationem perspiciatis, dolores iure natus accusamus consequatur.</p>
+                <a href="#" class="btn btn-sm btn-default">Read More</a>
+              </div>
+            </div>
+            <!-- End News Story -->
+            <!-- One News Story -->
+            <div class="col-sm-4">
+              <img src="http://placehold.it/170x90" class="img-responsive hidden-xs">
+            </div>
+            <div class="col-sm-8">
+              <div class="news-padding-fix">
+                <a href="#"><h4>News Article Title</h4></a>
+                <span class="meta-news">Tuesday, February 2, 2016</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa nam enim obcaecati a eligendi sunt officiis unde, quasi eos omnis ipsam excepturi exercitationem perspiciatis, dolores iure natus accusamus consequatur.</p>
+                <a href="#" class="btn btn-sm btn-default">Read More</a>
+              </div>
+            </div>
+            <!-- End News Story -->
+            <!-- One News Story -->
+            <div class="col-sm-4">
+              <img src="http://placehold.it/170x90" class="img-responsive hidden-xs">
+            </div>
+            <div class="col-sm-8">
+              <div class="news-padding-fix">
+                <a href="#"><h4>News Article Title</h4></a>
+                <span class="meta-news">Tuesday, February 2, 2016</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa nam enim obcaecati a eligendi sunt officiis unde, quasi eos omnis ipsam excepturi exercitationem perspiciatis, dolores iure natus accusamus consequatur.</p>
+                <a href="#" class="btn btn-sm btn-default">Read More</a>
+              </div>
+            </div>
+            <!-- End News Story -->
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <?php
 //get_sidebar();
