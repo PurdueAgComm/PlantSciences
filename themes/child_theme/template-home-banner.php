@@ -13,10 +13,10 @@ get_header(); ?>
     <div class="icon">
       <i class="fa fa-leaf"></i>
     </div>
-    <h1>PLANT SCIENCES INITIATIVE</h1>
+    <h1>PURDUE PLANT SCIENCES</h1>
     <div class="divider"></div>
     <div class="content">
-      <p class="content-text">Our mission is to be a global leader in delivering innovation, technology, and the human capacity necessary to help farming operations of all sizes produce food, fuel, and fiber more efficiently.</p>
+      <!-- <p class="content-text">Our mission is to be a global leader in delivering innovation, technology, and the human capacity necessary to help farming operations of all sizes produce food, fuel, and fiber more efficiently.</p> -->
     </div>
   </div>
 </div>
@@ -41,10 +41,10 @@ get_header(); ?>
             <h3>Research</h3>
             <div class="divider"></div>
             <ul>
-              <li><a href="http://www.admissions.purdue.edu/majors/index.php">Majors and Minors</a></li>
-              <li><a href="https://www.lib.purdue.edu/">Libraries</a></li>
-              <li><a href="http://www.purdue.edu/studentsuccess/orientation/learning_communities/index.html">Learning Communities</a></li>
-              <li><a href="http://www.purdue.edu/studentsuccess/academic/index.html">Academic Support and Tutoring</a></li>
+              <li><a href="#">Subsection 1</a></li>
+              <li><a href="#">Subsection 2</a></li>
+              <li><a href="#">Subsection 3</a></li>
+              <li><a href="#">Subsection 4</a></li>
             </ul>
           </div>
         </div>
@@ -57,10 +57,10 @@ get_header(); ?>
             <h3>Education</h3>
             <div class="divider"></div>
             <ul>
-              <li><a href="https://www.purdue.edu/gradschool/index.html">Graduate School</a></li>
-              <li><a href="https://honors.purdue.edu/">Honors College</a></li>
-              <li><a href="https://owl.english.purdue.edu/">Online Writing Lab</a></li>
-              <li><a href="http://www.purdue.edu/thinksummer/">Think Summer</a></li>
+              <li><a href="#">Subsection 1</a></li>
+              <li><a href="#">Subsection 2</a></li>
+              <li><a href="#">Subsection 3</a></li>
+              <li><a href="#">Subsection 4</a></li>
             </ul>
           </div>
         </div>
@@ -74,10 +74,10 @@ get_header(); ?>
             <h3>Impact</h3>
             <div class="divider"></div>
             <ul>
-              <li><a href="https://www.distance.purdue.edu/">Distance Learning</a></li>
-              <li><a href="http://www.purdue.edu/ziptrips/">Zip Trips</a></li>
-              <li><a href="http://www.studyabroad.purdue.edu/">Study Abroad</a></li>
-              <li><a href="http://www.purdue.edu/purdue/outreach_community/youth_programs.html">Youth Programs</a></li>
+              <li><a href="#">Subsection 1</a></li>
+              <li><a href="#">Subsection 2</a></li>
+              <li><a href="#">Subsection 3</a></li>
+              <li><a href="#">Subsection 4</a></li>
             </ul>
           </div>
         </div>
@@ -90,10 +90,10 @@ get_header(); ?>
             <h3>Support</h3>
             <div class="divider"></div>
             <ul>
-              <li><a href="http://www.purdue.edu/provost/">Provost</a></li>
-              <li><a href="http://www.purdue.edu/advisors/">Advising</a></li>
-              <li><a href="http://www.purdue.edu/vpsa/">Student Life</a></li>
-              <li><a href="https://www.iss.purdue.edu/">International Students and Scholars</a></li>
+              <li><a href="#">Subsection 1</a></li>
+              <li><a href="#">Subsection 2</a></li>
+              <li><a href="#">Subsection 3</a></li>
+              <li><a href="#">Subsection 4</a></li>
             </ul>
           </div>
         </div>
@@ -184,6 +184,7 @@ get_header(); ?>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa nam enim obcaecati a eligendi sunt officiis unde, quasi eos omnis ipsam excepturi exercitationem perspiciatis, dolores iure natus accusamus consequatur.</p>
                 <a href="#" class="btn btn-sm btn-default">Read More</a>
               </div>
+              <a href="#" class="btn btn-default btn-block btn-xs" style="margin-bottom:10px;">View All News Stories</a>
             </div>
             <!-- End News Story -->
           </div>
