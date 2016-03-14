@@ -23,3 +23,26 @@ function enqueue_font_awesome() {
 function enqueue_google_font_archivo() {
   wp_enqueue_style( 'google-font-archivo', 'https://fonts.googleapis.com/css?family=Archivo+Black');
 }
+
+// allow featured images support for theme
+if ( function_exists( 'add_theme_support' ) ) {
+  add_theme_support( 'post-thumbnails' );
+}
+
+/**
+ * Register our sidebars and widgetized areas.
+ * TODO
+ */
+function arphabet_widgets_init() {
+
+  register_sidebar( array(
+    'name'          => 'Home right sidebar',
+    'id'            => 'home_right_1',
+    'before_widget' => '<div>',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2 class="rounded">',
+    'after_title'   => '</h2>',
+  ) );
+
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
