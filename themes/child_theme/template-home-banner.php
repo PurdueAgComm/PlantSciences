@@ -24,7 +24,7 @@ get_header(); ?>
 <div class="proofPointContainer rowContainer">
   <div class="container">
     <div class="proofPoint row">
-      <h1>Working together to move plant science discoveries from research to application</h1>
+      <h1>Working together to move plant science discoveries from research to commercialization</h1>
     </div>
   </div>
 </div>
@@ -41,10 +41,10 @@ get_header(); ?>
             <h3>Research</h3>
             <div class="divider"></div>
             <ul>
-              <li><a href="#">Subsection 1</a></li>
-              <li><a href="#">Subsection 2</a></li>
-              <li><a href="#">Subsection 3</a></li>
-              <li><a href="#">Subsection 4</a></li>
+              <li><a href="center-for-molecular-agriculture-2/">Center for Molecular Agriculture</a></li>
+              <li><a href="phenotyping-2/">Phenotyping</a></li>
+              <li><a href="sensor-capabilities-2/">Sensor Capabilities</a></li>
+              <li><a href="collaboration-2/">Collaboration</a></li>
             </ul>
           </div>
         </div>
@@ -57,10 +57,10 @@ get_header(); ?>
             <h3>Education</h3>
             <div class="divider"></div>
             <ul>
-              <li><a href="#">Subsection 1</a></li>
-              <li><a href="#">Subsection 2</a></li>
-              <li><a href="#">Subsection 3</a></li>
-              <li><a href="#">Subsection 4</a></li>
+              <li><a href="http://admissions.purdue.edu/majors/colleges.php?ClgCd=AGR">Majors</a></li>
+              <li><a href="teaching-labs/">Teaching Labs</a></li>
+              <li><a href="https://ag.purdue.edu/oap/MASI/Pages/default.aspx">Summer Institutes</a></li>
+              <li><a href="https://ag.purdue.edu/oap/Pages/default.aspx">Academic Resources</a></li>
             </ul>
           </div>
         </div>
@@ -74,10 +74,10 @@ get_header(); ?>
             <h3>Impact</h3>
             <div class="divider"></div>
             <ul>
-              <li><a href="#">Subsection 1</a></li>
-              <li><a href="#">Subsection 2</a></li>
-              <li><a href="#">Subsection 3</a></li>
-              <li><a href="#">Subsection 4</a></li>
+              <li><a href="agricultural-2/">Agricultural</a></li>
+              <li><a href="agricultural/">Academic</a></li>
+              <li><a href="environmental/">Environmental</a></li>
+              <li><a href="technology-commercialization/">Technology & Commercialization</a></li>
             </ul>
           </div>
         </div>
@@ -90,10 +90,9 @@ get_header(); ?>
             <h3>Support</h3>
             <div class="divider"></div>
             <ul>
-              <li><a href="#">Subsection 1</a></li>
-              <li><a href="#">Subsection 2</a></li>
-              <li><a href="#">Subsection 3</a></li>
-              <li><a href="#">Subsection 4</a></li>
+              <li><a href="opportunities/">Opportunities</a></li>
+              <li><a href="partners/">Partners</a></li>
+              <li><a href="make-a-gift/">Make a Gift</a></li>
             </ul>
           </div>
         </div>
@@ -118,30 +117,28 @@ get_header(); ?>
       <div class="col-md-6">
         <div class="newsItem">
           <h1 class="newsItem-Title">Features</h1>
-          <div class="col-xs-4">
-            <img src="http://placehold.it/170x90" class="img-responsive">
+          <div class="col-xs-6">
+            <img src="http://placehold.it/250x120" class="img-responsive">
+            <h5><a href="#">Feature Title 1</a></h5>
+            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum error. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, blanditiis!  </p>
+          </div>
+          <div class="col-xs-6">
+            <img src="http://placehold.it/250x120" class="img-responsive">
+            <h5><a href="#">Feature Title 2</a></h5>
+            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <br style="clear: both;">
+          <div class="col-xs-6">
+            <img src="http://placehold.it/250x120" class="img-responsive">
+            <h5><a href="#">Feature Title 3</a></h5>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
-          <div class="col-xs-4">
-            <img src="http://placehold.it/170x90" class="img-responsive">
-            <p>Lorem ipsum dolor sit amet.</p>
+          <div class="col-xs-6">
+            <img src="http://placehold.it/250x120" class="img-responsive">
+            <h5><a href="#">Feature Title 4</a></h5>
+            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque, aperiam!</p>
           </div>
-          <div class="col-xs-4">
-            <img src="http://placehold.it/170x90" class="img-responsive">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div class="col-xs-4">
-            <img src="http://placehold.it/170x90" class="img-responsive">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div class="col-xs-4">
-            <img src="http://placehold.it/170x90" class="img-responsive">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div class="col-xs-4">
-            <img src="http://placehold.it/170x90" class="img-responsive">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
+          <br style="clear: both;">
         </div> <!-- /.newsItem -->
       </div> <!-- /.col-md-6-->
       <div class="col-md-6">

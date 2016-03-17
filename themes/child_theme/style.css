@@ -73,7 +73,7 @@ Version:        0.1.0
 @media (min-width: 768px) {
   /* line 50, ../sass/_audienceContent.scss */
   .introContainer .intro h1, .proofPoint h1  {
-    font-size: 3.5em;
+    font-size: 3.1em;
     line-height: 1em;
   }
 }
@@ -726,7 +726,7 @@ Version:        0.1.0
 }
 
 .featureNewsContainer {
-    background-image: url("https://www.purdue.edu/purdue/images/templateElements/2015/audience-newsBackground.jpg");
+    background-image: url("/plantsciences/wp-content/themes/child_theme/crop-bg.jpg");
     background-position: center center;
     background-size: cover;
 }
