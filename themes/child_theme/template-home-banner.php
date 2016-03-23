@@ -175,7 +175,7 @@ get_header(); ?>
                   <a href="<?php echo get_permalink($recent["ID"]); ?>"><h4><?php echo $recent["post_title"]; ?></h4></a>
                   <span class="meta-news"></span>
                   <p><?php echo $blurb . " [...]" ?></p>
-                  <a href="<?php echo get_permalink($recent["ID"]); ?>" class="btn btn-sm btn-default">Read More</a>
+                  <a href="<?php echo get_permalink($recent["ID"]); ?>" class="btn btn-sm btn-default clear-fix">Read More</a>
                 </div>
               </div>
               <!-- End News Story -->

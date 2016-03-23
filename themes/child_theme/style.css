@@ -725,6 +725,7 @@ Version:        0.1.0
 .news-padding-fix {
   margin-top: -20px;
   margin-bottom: 15px;
+  word-wrap: break-word;
 }
 
 .featureNewsContainer {
