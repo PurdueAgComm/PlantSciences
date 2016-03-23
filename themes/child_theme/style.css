@@ -718,6 +718,8 @@ Version:        0.1.0
 .meta-news {
   font-size: 13px;
   color: #777;
+  margin-top: -5px;
+  margin-bottom: 10px;
 }
 
 .news-padding-fix {
@@ -744,4 +746,10 @@ Version:        0.1.0
   padding: 20px 15px;
   font-family: 'Archivo Black',"Helvetica Neue",Helvetica,Arial,sans-serif;
   margin-top: -10px;
+}
+
+/* for background of menu when they are on that page */
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus  {
+  background-color: #fafafa;
 }
