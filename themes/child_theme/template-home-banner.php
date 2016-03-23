@@ -92,7 +92,7 @@ get_header(); ?>
             <ul>
               <li><a href="opportunities/">Opportunities</a></li>
               <li><a href="partners/">Partners</a></li>
-              <li><a href="make-a-gift/">Make a Gift</a></li>
+              <li><a href="https://securelb.imodules.com/s/1461/campaign/give.aspx?sid=1461&gid=1010&pgid=3175&cid=7440&bledit=1&sort=1&dids=2107.35&appealcode=13860">Make a Gift</a></li>
             </ul>
           </div>
         </div>
@@ -154,18 +154,27 @@ get_header(); ?>
                 // grab the featured image from the post
                 $thumb_id = get_post_thumbnail_id($recent["ID"]);
                 $featured_thumb_URL = wp_get_attachment_url($thumb_id);
+                $blurb = $recent["post_content"];
+                if (preg_match('/^.{1,260}\b/s', $blurb, $match))
+                {
+                    $blurb = $match[0];
+                }
               ?>
               <!-- One News Story -->
               <?php if(!empty($thumb_id)) : ?>
-                <div class="col-sm-4">
-                  <img src="<?php  echo $featured_thumb_URL; ?>" class="img-responsive hidden-xs" alt="<?php echo $recent["post_title"]; ?>">
-                </div>
+                  <div class="col-sm-4">
+                    <img src="<?php echo $featured_thumb_URL; ?>" class="img-responsive hidden-xs" alt="<?php echo $recent["post_title"]; ?>">
+                  </div>
+              <?php else: ?>
+                  <div class="col-sm-4">
+                    <img src="http://placehold.it/350x150" class="img-responsive hidden-xs">
+                  </div>
               <?php endif; ?>
               <div class="col-sm-8">
                 <div class="news-padding-fix">
                   <a href="<?php echo get_permalink($recent["ID"]); ?>"><h4><?php echo $recent["post_title"]; ?></h4></a>
                   <span class="meta-news"></span>
-                  <p><?php echo $recent["post_content"]; ?></p>
+                  <p><?php echo $blurb . " [...]" ?></p>
                   <a href="<?php echo get_permalink($recent["ID"]); ?>" class="btn btn-sm btn-default">Read More</a>
                 </div>
               </div>
