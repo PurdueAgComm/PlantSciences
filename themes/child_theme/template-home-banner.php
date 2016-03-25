@@ -117,27 +117,30 @@ get_header(); ?>
       <div class="col-md-6">
         <div class="newsItem">
           <h1 class="newsItem-Title">Features</h1>
-          <div class="col-xs-6">
-            <img src="http://placehold.it/250x120" class="img-responsive">
-            <h5><a href="#">Feature Title 1</a></h5>
-            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum error. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, blanditiis!  </p>
-          </div>
-          <div class="col-xs-6">
-            <img src="http://placehold.it/250x120" class="img-responsive">
-            <h5><a href="#">Feature Title 2</a></h5>
-            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-          <br style="clear: both;">
-          <div class="col-xs-6">
-            <img src="http://placehold.it/250x120" class="img-responsive">
-            <h5><a href="#">Feature Title 3</a></h5>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div class="col-xs-6">
-            <img src="http://placehold.it/250x120" class="img-responsive">
-            <h5><a href="#">Feature Title 4</a></h5>
-            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque, aperiam!</p>
-          </div>
+          <?php
+            // we need to get the last three posts that are tagged as news that are published
+            $args = array( 'numberposts' => '4', 'post_status' => 'publish', 'category' => '13');
+            $recent_posts = wp_get_recent_posts( $args );
+            foreach( $recent_posts as $recent ) :
+              // grab the featured image from the post
+              $thumb_id = get_post_thumbnail_id($recent["ID"]);
+              $featured_thumb_URL = wp_get_attachment_url($thumb_id);
+              $blurb = $recent["post_content"];
+              if (preg_match('/^.{1,260}\b/s', $blurb, $match))
+              {
+                  $blurb = $match[0];
+              }
+            ?>
+            <div class="col-xs-6">
+              <?php if(!empty($thumb_id)) : ?>
+                <img style="min-width: 250px;" src="<?php echo $featured_thumb_URL; ?>" class="img-responsive hidden-xs" alt="<?php echo $recent["post_title"]; ?>">
+              <?php else: ?>
+                <img src="http://placehold.it/350x150&text=No Image" class="img-responsive hidden-xs">
+              <?php endif; ?>
+              <h5><a href="#"><?php echo $recent["post_title"]; ?></a></h5>
+              <p><?php echo $blurb  . " [...]"; ?></p>
+            </div>
+          <?php endforeach; ?>
           <br style="clear: both;">
         </div> <!-- /.newsItem -->
       </div> <!-- /.col-md-6-->
@@ -149,8 +152,6 @@ get_header(); ?>
               $args = array( 'numberposts' => '3', 'post_status' => 'publish', 'category' => '6');
               $recent_posts = wp_get_recent_posts( $args );
               foreach( $recent_posts as $recent ) :
-              // echo '<a href="' . get_permalink($recent["ID"]) . '" title="Read: '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a>';
-              // echo "<p>" . $recent["post_content"] . "</p>";
                 // grab the featured image from the post
                 $thumb_id = get_post_thumbnail_id($recent["ID"]);
                 $featured_thumb_URL = wp_get_attachment_url($thumb_id);
@@ -166,8 +167,9 @@ get_header(); ?>
                     <img src="<?php echo $featured_thumb_URL; ?>" class="img-responsive hidden-xs" alt="<?php echo $recent["post_title"]; ?>">
                   </div>
               <?php else: ?>
-                  <div class="col-sm-4">
-                    <img src="http://placehold.it/350x150" class="img-responsive hidden-xs">
+                  <div class="col-sm-4 text-center">
+                    <i style="color: #dadada;" class="fa fa-newspaper-o fa-5x"></i>
+                    <!-- <img src="http://placehold.it/350x150" class="img-responsive hidden-xs"> -->
                   </div>
               <?php endif; ?>
               <div class="col-sm-8">
