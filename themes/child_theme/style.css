@@ -754,3 +754,15 @@ Version:        0.1.0
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus  {
   background-color: #fafafa;
 }
+
+.caption {
+  background-color: #fafafa;
+  border-left: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+  padding: 7px;
+}
+
+.maincontent .banner {
+  padding-bottom: 10px;
+}
