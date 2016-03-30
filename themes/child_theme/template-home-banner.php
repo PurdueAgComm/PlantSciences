@@ -151,6 +151,7 @@ get_header(); ?>
               // we need to get the last three posts that are tagged as news that are published
               $args = array( 'numberposts' => '3', 'post_status' => 'publish', 'category' => '6');
               $recent_posts = wp_get_recent_posts( $args );
+              $i = 0;
               foreach( $recent_posts as $recent ) :
                 // grab the featured image from the post
                 $thumb_id = get_post_thumbnail_id($recent["ID"]);
@@ -178,11 +179,17 @@ get_header(); ?>
                   <span class="meta-news"></span>
                   <p><?php echo $blurb . " [...]" ?></p>
                   <a href="<?php echo get_permalink($recent["ID"]); ?>" class="btn btn-sm btn-default clear-fix">Read More</a>
+                  <?php if($i == 2) : ?>
+                    <a class="btn btn-sm btn-default" href="/plantsciences/news">View All News &raquo;</a>
+                  <?php endif; ?>
                 </div>
               </div>
               <!-- End News Story -->
-            <?php endforeach; ?>
+            <?php
+            $i++;
+            endforeach; ?>
           </div>
+
       </div>
     </div>
   </div>
