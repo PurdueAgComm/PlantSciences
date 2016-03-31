@@ -5,7 +5,18 @@ add_action( 'wp_enqueue_scripts', 'purdue2014_parent_theme_enqueue_styles' );
 add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
 add_action( 'wp_enqueue_scripts', 'enqueue_google_font_archivo' );
 
+// Register Custom Navigation Walker
+require_once('wp_bootstrap_pagination.php');
+
 // FUNCTIONS
+
+function customize_wp_bootstrap_pagination($args) {
+    $args['previous_string'] = '<i class="fa fa-caret-left"></i> Previous';
+    $args['next_string'] = 'Next <i class="fa fa-caret-right"></i>';
+    return $args;
+}
+
+add_filter('wp_bootstrap_pagination_defaults', 'customize_wp_bootstrap_pagination');
 
 function purdue2014_parent_theme_enqueue_styles() {
     wp_enqueue_style( 'purdue2014-style', get_template_directory_uri() . '/style.css' );
@@ -46,3 +57,4 @@ function arphabet_widgets_init() {
 
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
+
