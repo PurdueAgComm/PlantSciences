@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Template Name: Home Banner Page
+ * Template Name: News Home Banner Page
  *
 **/
 
@@ -21,54 +21,63 @@ get_header(); ?>
   </div>
 </div>
 
-
-
 <div class="container">
-  <br><br>
-      <?php
-      // we need to get the last three posts that are tagged as news that are published
-      $args = array( 'numberposts' => '3', 'post_status' => 'publish', 'category' => '6');
-      $recent_posts = wp_get_recent_posts( $args );
-      foreach( $recent_posts as $recent ) :
-      // echo '<a href="' . get_permalink($recent["ID"]) . '" title="Read: '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a>';
-      // echo "<p>" . $recent["post_content"] . "</p>";
-        // grab the featured image from the post
-        $thumb_id = get_post_thumbnail_id($recent["ID"]);
-        $featured_thumb_URL = wp_get_attachment_url($thumb_id);
-        $blurb = $recent["post_content"];
-        if (preg_match('/^.{1,500}\b/s', $blurb, $match))
-        {
-            $blurb = $match[0];
-        }
-      ?>
-      <!-- One News Story -->
-      <?php if(!empty($thumb_id)) : ?>
-        <div class="row">
-          <div class="col-sm-4">
-            <img src="<?php  echo $featured_thumb_URL; ?>" class="img-responsive hidden-xs" alt="<?php echo $recent["post_title"]; ?>">
-          </div>
-      <?php else: ?>
-        <div class="row">
-          <div class="col-sm-4">
-            <img src="http://placehold.it/350x150">
-          </div>
+  <div class="row" style="padding: 15px 0; border-bottom: 1px solid #dadada;">
+    <div class="col-sm-3 sidenav">
+      <ul>
+      <?php wp_nav_menu( array(
+          'menu' => 'News Secondary Menu'
+      )); ?>
+      </ul>
+    </div>
+    <div class="col-sm-9">
+    <?php
+    // set the "paged" parameter (use 'page' if the query is on a static front page)
+    $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+    // the query
+    $the_query = new WP_Query( 'cat=6&paged=' . $paged );
+    if ( $the_query->have_posts() ) :
+    // the loop
+    while ($the_query->have_posts()) :
+      $the_query->the_post();
+    ?>
+
+
+      <?php if(has_post_thumbnail()) : ?>
+        <div class="col-sm-4">
+          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+            <?php the_post_thumbnail( array( 250, 350), array( 'class' => 'img-responsive' ) ) ?>
+          </a>
+        </div>
+      <?php else : ?>
+        <div class="col-sm-4 text-center">
+          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+            <i class="fa fa-newspaper-o fa-5x"></i>
+          </a>
+        </div>
       <?php endif; ?>
         <div class="col-sm-8">
-          <div class="news-padding-fix">
-            <a href="<?php echo get_permalink($recent["ID"]); ?>"><h4><?php echo $recent["post_title"]; ?></h4></a>
-            <div class="meta-news"><?php echo get_the_date('l, F j, Y', $recent["ID"]) . $recent["post_meta"]; ?></div>
-            <p><?php echo $blurb . " [...]" ?></p>
-            <a href="<?php echo get_permalink($recent["ID"]); ?>" class="btn btn-sm btn-default">Read More</a>
-          </div>
+          <h3 class="media-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+          <?php if(get_the_date()) :?>
+            <p class="meta-news"><i class="fa fa-calendar"></i> <?php echo get_the_date(); ?></p>
+          <?php endif; ?>
+          <?php the_excerpt(); ?>
+          <p><a href="<?php the_permalink(); ?>" class="btn btn-default btn-sm btn-block">Read More &raquo;</a></p>
         </div>
-      </div> <!-- /.row -->
-      <br><br>
-      <!-- End News Story -->
-      <?php endforeach; ?>
-
+        <br style="clear:both;"><br style="clear:both;">
+    <?php endwhile;
+    if(function_exists('wp_bootstrap_pagination')) {
+      wp_bootstrap_pagination();
+    }
+    // clean up after the query and pagination
+    wp_reset_postdata();
+    ?>
+    <?php else:  ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+    <?php endif; ?>
+    </div>
+  </div> <!-- /.row -->
 </div> <!-- /.container -->
-
-
 <?php
 //get_sidebar();
 get_footer();
