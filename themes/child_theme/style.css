@@ -752,7 +752,8 @@ Version:        0.1.0
 /* for background of menu when they are on that page */
 
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus  {
-  background-color: #fafafa;
+  background-color: #a3792c;
+  color: #fafafa !important;
 }
 
 .caption {
