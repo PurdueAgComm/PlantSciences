@@ -43,7 +43,6 @@ get_header(); ?>
             <ul>
               <li><a href="center-for-molecular-agriculture-2/">Center for Molecular Agriculture</a></li>
               <li><a href="phenotyping-2/">Phenotyping</a></li>
-              <li><a href="sensor-capabilities-2/">Sensor Capabilities</a></li>
               <li><a href="collaboration-2/">Collaboration</a></li>
             </ul>
           </div>
@@ -74,9 +73,8 @@ get_header(); ?>
             <h3>Impact</h3>
             <div class="divider"></div>
             <ul>
-              <li><a href="agricultural-2/">Agricultural</a></li>
-              <li><a href="agricultural/">Academic</a></li>
-              <li><a href="environmental/">Environmental</a></li>
+              <li><a href="agricultural/">Agricultural</a></li>
+              <li><a href="academic/">Academic</a></li>
               <li><a href="technology-commercialization/">Technology & Commercialization</a></li>
             </ul>
           </div>
