@@ -135,7 +135,7 @@ get_header(); ?>
               <?php else: ?>
                 <img src="http://placehold.it/350x150&text=No Image" class="img-responsive hidden-xs">
               <?php endif; ?>
-              <h5><a href="#"><?php echo $recent["post_title"]; ?></a></h5>
+              <h5><a href="<?php echo get_permalink($recent["ID"]); ?>"><?php echo $recent["post_title"]; ?></a></h5>
               <p><?php echo $blurb  . " [...]"; ?></p>
             </div>
           <?php endforeach; ?>
@@ -192,6 +192,7 @@ get_header(); ?>
     </div>
   </div>
 </div>
+
 
 <?php
 //get_sidebar();
