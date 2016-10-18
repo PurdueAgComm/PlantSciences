@@ -178,7 +178,8 @@ get_header(); ?>
                   <p><?php echo $blurb . " [...]" ?></p>
                   <a href="<?php echo get_permalink($recent["ID"]); ?>" class="btn btn-sm btn-default clear-fix">Read More</a>
                   <?php if($i == 2) : ?>
-                    <a class="btn btn-sm btn-default" href="/plantsciences/news">View All News &raquo;</a>
+                    <br><br>
+                    <a class="btn btn-sm btn-default btn-block" href="/plantsciences/recent-news">View All News &raquo;</a>
                   <?php endif; ?>
                 </div>
               </div>
