@@ -1,60 +1,21 @@
 <?php
 
-add_action( 'wp_enqueue_scripts', 'purdue2014_parent_theme_enqueue_styles' );
-// Load Font Awesome
-add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
-add_action( 'wp_enqueue_scripts', 'enqueue_google_font_archivo' );
-
-// Register Custom Navigation Walker
-require_once('wp_bootstrap_pagination.php');
-
-// FUNCTIONS
-
-function customize_wp_bootstrap_pagination($args) {
-    $args['previous_string'] = '<i class="fa fa-caret-left"></i> Previous';
-    $args['next_string'] = 'Next <i class="fa fa-caret-right"></i>';
-    return $args;
+function updated_purduetwentyfourteen_scripts() {
+wp_enqueue_style( 'bootstrap.min', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' );
+wp_enqueue_script('bootstrap.min', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array(), true);
 }
+remove_action( 'wp_enqueue_scripts', 'purduetwentyfourteen_scripts' );
+add_action( 'wp_enqueue_scripts', 'updated_purduetwentyfourteen_scripts' );
 
-add_filter('wp_bootstrap_pagination_defaults', 'customize_wp_bootstrap_pagination');
-
-function purdue2014_parent_theme_enqueue_styles() {
-    wp_enqueue_style( 'purdue2014-style', get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'child_theme-style',
-        get_stylesheet_directory_uri() . '/style.css',
-        array( 'purdue2014-style' )
-    );
+function purdue2015_parent_theme_enqueue_styles() {
+  wp_deregister_style( 'style-css' );
+  wp_enqueue_style('purdue2015-style', get_stylesheet_directory_uri() . '/style-pu2015.css');
+  wp_enqueue_style('archivo-narrow-font', 'https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700,700italic' );
+  wp_enqueue_style('archivo-black-font', 'https://fonts.googleapis.com/css?family=Archivo+Black' );
+  wp_enqueue_style( 'font_awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
+  wp_enqueue_style( 'titilium_font', 'https://fonts.googleapis.com/css?family=Titillium+Web:400,700' );
+  wp_enqueue_script( 'addthis', 'https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56d09899de4347ce');
+  wp_enqueue_style('style-css', get_stylesheet_directory_uri() . '/style.css');
 
 }
-
-function enqueue_font_awesome() {
-  wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css' );
-}
-
-function enqueue_google_font_archivo() {
-  wp_enqueue_style( 'google-font-archivo', 'https://fonts.googleapis.com/css?family=Archivo+Black');
-}
-
-// allow featured images support for theme
-if ( function_exists( 'add_theme_support' ) ) {
-  add_theme_support( 'post-thumbnails' );
-}
-
-/**
- * Register our sidebars and widgetized areas.
- * TODO
- */
-function arphabet_widgets_init() {
-
-  register_sidebar( array(
-    'name'          => 'Home right sidebar',
-    'id'            => 'home_right_1',
-    'before_widget' => '<div>',
-    'after_widget'  => '</div>',
-    'before_title'  => '<h2 class="rounded">',
-    'after_title'   => '</h2>',
-  ) );
-
-}
-add_action( 'widgets_init', 'arphabet_widgets_init' );
-
+add_action( 'wp_enqueue_scripts', 'purdue2015_parent_theme_enqueue_styles' );
