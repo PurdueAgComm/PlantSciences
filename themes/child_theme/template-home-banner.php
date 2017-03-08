@@ -13,7 +13,7 @@ get_header(); ?>
     <div class="icon">
       <i class="fa fa-leaf"></i>
     </div>
-    <h1>PLANT SCIENCES</h1>
+    <h1>Institute for Plant Sciences</h1>
     <div class="divider"></div>
     <div class="content">
       <!-- <p class="content-text">Our mission is to be a global leader in delivering innovation, technology, and the human capacity necessary to help farming operations of all sizes produce food, fuel, and fiber more efficiently.</p> -->
