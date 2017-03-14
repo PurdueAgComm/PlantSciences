@@ -63,6 +63,11 @@ var _gaq = _gaq || [];
   <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=agcomm"></script>
 
   <?php wp_head(); ?>
+  <style>
+    /* gallery bank adds 2px solid black border to image, this is done to override that */
+    div.dynamic_css {border: none !important;}
+  </style>
+
 </head>
 <body style="">
 <div class="navbar navbar-inverse goldbar" role="navigation">
