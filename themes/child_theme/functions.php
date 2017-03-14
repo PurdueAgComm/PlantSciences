@@ -10,6 +10,7 @@ add_action( 'wp_enqueue_scripts', 'updated_purduetwentyfourteen_scripts' );
 function purdue2015_parent_theme_enqueue_styles() {
   wp_deregister_style( 'style-css' );
   wp_enqueue_style('purdue2015-style', get_stylesheet_directory_uri() . '/style-pu2015.css');
+  wp_enqueue_style('site-styles', get_stylesheet_directory_uri() . '/site-styles.css');
   wp_enqueue_style('archivo-narrow-font', 'https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700,700italic' );
   wp_enqueue_style('archivo-black-font', 'https://fonts.googleapis.com/css?family=Archivo+Black' );
   wp_enqueue_style( 'font_awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
