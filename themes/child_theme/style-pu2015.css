@@ -48,12 +48,14 @@ html {
 }
 
 body {
-    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
+    color: #171717;
+
 }
 
 @media (min-width: 768px) {
     body {
-        font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+        font-family: "Open Sans", Arial, sans-serif;
         font-size: 1em;
         line-height: 1.5em;
     }
@@ -69,52 +71,55 @@ body {
 h1 {
     padding-top: 0;
     padding-bottom: .25em;
-    font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    color: #b1810b;
-    font-size: 2.25em;
+    font-family: "Open Sans", Arial, sans-serif;
+    color: #000 !important;
+    font-size: 2.3em;
+    font-weight: 600;
     line-height: 1.1em;
 }
 
 h2 {
     padding-top: 1em;
     padding-bottom: .15em;
-    font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #b1810b;
+    font-family: "Open Sans", Arial, sans-serif;
+    color: #000 !important;
     font-size: 2em;
+    font-weight: 600;
     line-height: 1.2em;
 }
 
 h3 {
     padding-top: 1em;
-    font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #b1810b;
+    font-family: "Open Sans", Arial, sans-serif;
+    color: #000 !important;
     font-size: 1.75em;
     line-height: 1.2em;
 }
 
 h4 {
     padding-top: 1em;
-    font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    font-size: 1.5em;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 800;
     line-height: 1.2em;
 }
 
 h5 {
     padding-top: 1.5em;
-    font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    font-size: 1.25em;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1em;
+    color: #000 !important;
+    font-weight: 800;
     line-height: 1.2em;
     text-transform: uppercase;
 }
 
 h6 {
     padding-top: 2em;
-    font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: "Open Sans", Arial, sans-serif;
     font-size: 1em;
+    color: #000 !important;
+    font-weight: 800;
     line-height: 1.2em;
     text-transform: uppercase;
 }
@@ -184,13 +189,13 @@ big {
 }
 
 a:link {
-    color: #000;
-    font-weight: 700;
-    text-decoration: underline;
+color: #000;
+font-weight: 600;
+text-decoration: underline;
 }
 
 a:visited {
-    color: #000;
+    color: #ad1f65;
     font-weight: 700;
     text-decoration: underline;
 }
@@ -703,11 +708,11 @@ u {
 
 @media (min-width: 992px) {
     .blackbar li {
-        color: #999;
+        color: #fff;
     }
 
     .blackbar li:hover {
-        color: #fff;
+        color: #b1810b;
     }
 }
 
@@ -937,6 +942,31 @@ u {
     .blackbar .black .dropdown-menu .dropdown-submenu:hover::after {
         border-left-color: #fff;
     }
+}
+
+h1.logotext {
+    font-weight: normal;
+    font-size: 2em;
+    margin-top: 6.2%;
+    color: rgb(255, 255, 255) !important;
+}
+
+h1.logotext a {
+    font-weight: normal;
+    text-decoration: none;
+}
+
+@media (max-width: 1200px){
+  h1.logotext {
+     margin-top: 9.5%;
+ }
+}
+
+.blackbar a:link {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-weight: 400;
+    background-color: transparent;
 }
 
 @media (max-width: 767px) {
@@ -1364,7 +1394,7 @@ u {
 }
 
 .collegeContent .grid .tiles .row .tile a {
-    font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     color: #fff;
 }
 
@@ -2519,7 +2549,6 @@ u {
     display: inline-block;
     position: relative;
     overflow: hidden;
-    width: 23px;
     margin: 2.5px 2%;
     text-align: center;
 }
@@ -2554,6 +2583,10 @@ u {
 .footer #accordion .motto img {
     width: 100%;
     margin-bottom: 5px;
+}
+
+.footer #accordion .motto a i {
+    width: 23px;
 }
 
 @media (min-width: 1200px) {
@@ -2803,7 +2836,6 @@ u {
     }
 
     .footer #accordion .motto a {
-        width: 28px;
         margin: 9px 2%;
     }
 
@@ -2880,8 +2912,9 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/
 
 */
 /* WordPress CSS fixes */
-.maincontent a {
-    color: #a3792c;
+
+.maincontent {
+    padding-top:10px;
 }
 
 .maincontent img {
@@ -3137,8 +3170,6 @@ Tags: Responsive, Bootstrap, Purdue, 2014, Font Awesome, Advanced Custom Fields,
     }
 }
 
-
-
 .sidenav,
 .sidecontent {
   padding-bottom:20px;
@@ -3214,3 +3245,71 @@ Tags: Responsive, Bootstrap, Purdue, 2014, Font Awesome, Advanced Custom Fields,
   line-height:14px;
   font-size:12px;
 }
+
+/* updated banner css */
+.full-width-banner {
+    position: relative;
+    z-index: 1;
+    height: 600px;
+    width: 100%;
+    background: 50% no-repeat;
+    background-size: cover;
+
+}
+
+.shader{
+  background-color:rgba(0,0,0,.6);
+  margin-top: 30%;
+  padding: 2em;
+}
+.fullwidthheader{
+  color: #fff !important;
+    font-size: 3em;
+    text-shadow: 2px 2px rgba(0,0,0,0.9);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    line-height: 1em;
+
+}
+
+.fullwidthparagraph{
+  color: #FFD100;
+    font-size: 2.2em;
+    margin-top: 2%;
+    text-shadow: 2px 2px rgba(0,0,0,0.9);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 1em;
+
+}
+
+
+@media (max-width: 768px){
+.full-width-banner  {
+ height: 250px;
+}
+.shader{
+margin-top: 10%;
+}
+.fullwidthheader{
+font-size: 1.5em;
+}
+.fullwidthparagraph{
+font-size: 1em;
+}
+
+}
+
+@media (max-width: 400px){
+.shader{
+margin-top:5%;
+}
+}
+
+.desktopHeader {
+    color: #fefefe;
+    font-weight: 600;
+    font-size: larger;
+    list-style: none;
+}
+
