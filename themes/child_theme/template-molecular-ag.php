@@ -25,7 +25,7 @@ get_header(); ?>
             </style>
             <div class="banner">
                 <span class="caption">
-                        <h2 class="header">Center for Molecular Agriculture</h2><br/>
+                        <h2 class="header" style='color: #fff;'>Purdue Center for Plant Biology</h2><br/>
                         <p class="subheader">Addressing important fundamental questions in plant biology</p>
                 </span>
               </div>
@@ -51,7 +51,7 @@ get_header(); ?>
               </div>
               <div class="tileRow">
                 <div class="tileContainer col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <a class="tile careers" href="/molecular-ag-people">
+                  <a class="tile careers" href="/plantsciences/pcpb-members/">
                     <span class="caption">
                       <span class="icon"><i class="fa fa-users"></i></span>
                       <span class="text">Membership</span>
@@ -68,10 +68,10 @@ get_header(); ?>
             <?php endwhile; // end of the loop. ?>
           </div>
           <div class="featureButtons col-lg-3 col-md-3 col-sm-3 col-xs-12">
-            <a class="button" href="https://purdue.edu/gradschool/pulse/groups/integrative-plant-sciences/index.html">What is PULSe?</a>
+            <a class="button" href="/plantsciences/what-is-cma/">What is PCPB?</a>
             <a class="button" href="https://ag.purdue.edu/Pages/awards.aspx">Points of Pride</a>
             <a class="button" href="http://www.purdue.edu/research/life-sciences/core-facilities.php">Core Facilities</a>
-            <a class="button" href="molecular-ag-photos">Photo Library</a>
+            <a class="button" href="/plantsciences/purdue-center-for-plant-biology-photo-library/">Photo Library</a>
           </div>
         </div>
       </div>
