@@ -54,7 +54,7 @@ get_header(); ?>
                   <a class="tile careers" href="/plantsciences/pcpb-members/">
                     <span class="caption">
                       <span class="icon"><i class="fa fa-users"></i></span>
-                      <span class="text">Membership</span>
+                      <span class="text">Faculty</span>
                     </span>
                   </a>
                 </div>
@@ -64,11 +64,16 @@ get_header(); ?>
         <div class="row contentRow">
           <div class="mainContent col-lg-9 col-md-9 col-sm-9 col-xs-12 right">
             <?php while ( have_posts() ) : the_post(); ?>
+              <div class="col-sm-8">
                 <?php get_template_part( 'content', 'molecular' ); ?>
+              </div>
+              <div class="col-sm-4">
+                <p style="text-align: right;"><a class="twitter-timeline tw-align-right" href="https://twitter.com/PurdueCPB" data-width="220" data-height="300" data-link-color="#FAB81E">Tweets by PurdueCPB</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+              </div>
             <?php endwhile; // end of the loop. ?>
           </div>
           <div class="featureButtons col-lg-3 col-md-3 col-sm-3 col-xs-12">
-            <a class="button" href="/plantsciences/what-is-cma/">What is PCPB?</a>
+            <a class="button" href="/plantsciences/what-is-cma/">What is CPB?</a>
             <a class="button" href="https://ag.purdue.edu/Pages/awards.aspx">Points of Pride</a>
             <a class="button" href="http://www.purdue.edu/research/life-sciences/core-facilities.php">Core Facilities</a>
             <a class="button" href="/plantsciences/purdue-center-for-plant-biology-photo-library/">Photo Library</a>

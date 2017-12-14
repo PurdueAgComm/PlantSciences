@@ -7,16 +7,15 @@
 
 get_header(); ?>
 
-<div class="introContainer rowContainer" id="introRow">
-  <div class="shader"></div>
-  <div class="container intro">
-    <div class="icon">
-      <i class="fa fa-leaf"></i>
-    </div>
-    <h1>PLANT SCIENCES NEWS</h1>
-    <div class="divider"></div>
-    <div class="content">
-      <!-- <p class="content-text">Our mission is to be a global leader in delivering innovation, technology, and the human capacity necessary to help farming operations of all sizes produce food, fuel, and fiber more efficiently.</p> -->
+<div class="full-width-banner" style="background-image: url('/plantsciences/wp-content/uploads/2017/10/drone-bg.jpg');">
+  <div class="container">
+    <div class="col-lg-12">
+      <div class="shader">
+      <article>
+        <div class="fullwidthheader">Institute for Plant Sciences News</div>
+        <p class="fullwidthparagraph">Working together to move plant science discoveries from research to commercialization</p>
+      </article>
+      </div>
     </div>
   </div>
 </div>

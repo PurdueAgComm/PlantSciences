@@ -7,24 +7,44 @@
 
 get_header(); ?>
 
-<div class="introContainer rowContainer" id="introRow">
-  <div class="shader"></div>
-  <div class="container intro">
-    <div class="icon">
-      <i class="fa fa-leaf"></i>
-    </div>
-    <h1>Institute for Plant Sciences</h1>
-    <div class="divider"></div>
-    <div class="content">
-      <!-- <p class="content-text">Our mission is to be a global leader in delivering innovation, technology, and the human capacity necessary to help farming operations of all sizes produce food, fuel, and fiber more efficiently.</p> -->
-    </div>
-  </div>
-</div>
+<style>
+.shader1{background-color:rgba(0,0,0,.6);margin-top:32%;padding:2em;}
+.shaderfix1{margin-top:37%;}
 
-<div class="proofPointContainer rowContainer">
+@media (max-width:768px){.full-width-banner{height:250px;}
+.shader1{margin-top:7%;}
+.fullwidthheader{font-size:1.5em;}
+.fullwidthparagraph{font-size:1em;}
+}
+
+@media (max-width:400px){.shader{margin-top:5%;}}
+
+.entry-content h1 {
+  /* phenotyping section is on blue background for contrast */
+  color: white !important;
+}
+
+.temproary-bigidea {
+  background: url(https://ag.purdue.edu/envision/wp-content/uploads/2017/05/Big-Idea-Bottom-Parallax-Background2.jpg);
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -20px;
+  color: white !important;
+}
+  </style>
+
+<div class="full-width-banner" style="background-image: url('/plantsciences/wp-content/uploads/2017/10/drone-bg.jpg');">
   <div class="container">
-    <div class="proofPoint row">
-      <h1>Working together to move plant science discoveries from research to commercialization</h1>
+    <div class="col-lg-12">
+      <div class="shader">
+      <article>
+        <div class="fullwidthheader">Institute for Plant Sciences</div>
+        <p class="fullwidthparagraph">Working together to move plant science discoveries from research to commercialization</p>
+      </article>
+      </div>
     </div>
   </div>
 </div>
@@ -35,63 +55,34 @@ get_header(); ?>
       <div class="columnPair">
         <div class="columnContainer col-lg-6 col-md-6 col-sm-6 col-xs-12">
           <div class="column">
-            <div class="icon">
-              <i class="fa fa-flask"></i>
-            </div>
-            <h3>Research</h3>
+            <h3>Basic Plant Biology</h3>
             <div class="divider"></div>
-            <ul>
-              <li><a href="center-for-molecular-agriculture-2/">Center for Molecular Agriculture</a></li>
-              <li><a href="phenotyping-2/">Phenotyping</a></li>
-              <li><a href="collaboration-2/">Collaboration</a></li>
-            </ul>
+            <p>Invest in basic plant sciences research and education</p>
           </div>
         </div>
 
         <div class="columnContainer col-lg-6 col-md-6 col-sm-6 col-xs-12">
           <div class="column">
-            <div class="icon">
-              <i class="fa fa-graduation-cap"></i>
-            </div>
-            <h3>Education</h3>
+            <h3>Phenomics</h3>
             <div class="divider"></div>
-            <ul>
-              <li><a href="http://admissions.purdue.edu/majors/colleges.php?ClgCd=AGR">Majors</a></li>
-              <li><a href="teaching-labs/">Teaching Labs</a></li>
-              <li><a href="https://ag.purdue.edu/oap/MASI/Pages/default.aspx">Summer Institutes</a></li>
-              <li><a href="https://ag.purdue.edu/oap/Pages/default.aspx">Academic Resources</a></li>
-            </ul>
+            <p>Automate data collection to link genes with observable traits, or "phenotypes," caused by environmental variation</p>
           </div>
         </div>
       </div>
       <div class="columnPair">
         <div class="columnContainer col-lg-6 col-md-6 col-sm-6 col-xs-12">
           <div class="column">
-            <div class="icon">
-              <i class="fa fa-globe"></i>
-            </div>
-            <h3>Impact</h3>
+            <h3>Digital Agriculture</h3>
             <div class="divider"></div>
-            <ul>
-              <li><a href="agricultural/">Agricultural</a></li>
-              <li><a href="academic/">Academic</a></li>
-              <li><a href="technology-commercialization/">Technology & Commercialization</a></li>
-            </ul>
+            <p>Integrate data streams using a robust analytic platform</p>
           </div>
         </div>
 
         <div class="columnContainer col-lg-6 col-md-6 col-sm-6 col-xs-12">
           <div class="column">
-            <div class="icon">
-              <i class="fa fa-users"></i>
-            </div>
-            <h3>Support</h3>
+            <h3>Entrepreneurship</h3>
             <div class="divider"></div>
-            <ul>
-              <li><a href="opportunities/">Opportunities</a></li>
-              <li><a href="partners/">Partners</a></li>
-              <li><a href="https://securelb.imodules.com/s/1461/campaign/give.aspx?sid=1461&gid=1010&pgid=3175&cid=7440&bledit=1&sort=1&dids=2107.35&appealcode=13860">Make a Gift</a></li>
-            </ul>
+              <p>Drive innovations from research to commercialization</p>
           </div>
         </div>
       </div>
@@ -99,14 +90,16 @@ get_header(); ?>
   </div>
 </div>
 
+
 <?php while ( have_posts() ) : the_post(); ?>
-  <div class="container">
+  <div class="section temproary-bigidea">
+    <div class="container">
     <div class="row">
       <div class="col-xs-12">
         <?php get_template_part( 'content', 'page' ); ?>
       </div>
     </div>
-  </div>
+  </div></div>
 <?php endwhile; // end of the loop. ?>
 
   <div class="featureNewsContainer rowContainer">
@@ -154,11 +147,15 @@ get_header(); ?>
                 // grab the featured image from the post
                 $thumb_id = get_post_thumbnail_id($recent["ID"]);
                 $featured_thumb_URL = wp_get_attachment_url($thumb_id);
-                $blurb = $recent["post_content"];
-                if (preg_match('/^.{1,260}\b/s', $blurb, $match))
-                {
-                    $blurb = $match[0];
+                $blurb = get_the_excerpt($recent["ID"]);
+                if(empty($blurb)) {
+                  $blurb = get_the_content($recent["ID"]);
+                   if (preg_match('/^.{1,260}\b/s', $blurb, $match))
+                    {
+                        $blurb = $match[0];
+                    }
                 }
+
               ?>
               <!-- One News Story -->
               <?php if(!empty($thumb_id)) : ?>
@@ -167,15 +164,17 @@ get_header(); ?>
                   </div>
               <?php else: ?>
                   <div class="col-sm-4 text-center">
+                    <br>
                     <i style="color: #dadada;" class="fa fa-newspaper-o fa-5x"></i>
                     <!-- <img src="http://placehold.it/350x150" class="img-responsive hidden-xs"> -->
                   </div>
               <?php endif; ?>
               <div class="col-sm-8">
                 <div class="news-padding-fix">
+                  <br>
                   <a href="<?php echo get_permalink($recent["ID"]); ?>"><h4><?php echo $recent["post_title"]; ?></h4></a>
                   <span class="meta-news"></span>
-                  <p><?php echo $blurb . " [...]" ?></p>
+                  <p><?php echo $blurb; ?></p>
                   <a href="<?php echo get_permalink($recent["ID"]); ?>" class="btn btn-sm btn-default clear-fix">Read More</a>
                   <?php if($i == 2) : ?>
                     <br><br>
@@ -198,5 +197,4 @@ get_header(); ?>
 <?php
 //get_sidebar();
 get_footer();
-
 

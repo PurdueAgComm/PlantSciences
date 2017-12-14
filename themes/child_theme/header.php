@@ -32,6 +32,7 @@ var _gaq = _gaq || [];
   // change the account number in the line below to your account
   // The number here is for the main Purdue analytics account
   _gaq.push(['_setAccount', 'UA-2785081-1']);
+  _gaq.push(['_setAccount', 'UA-31151555-1']);
   _gaq.push(['_trackPageview']);
 
   // If you're tracking to your own account above and would also like track page views
@@ -136,7 +137,7 @@ var _gaq = _gaq || [];
 <div class="top">
 <div class="container">
 <div class="row">
-<div class="logo col-lg-2 col-md-3 col-sm-3 col-xs-12"><a href="http://www.purdue.edu"><img alt="Purdue University" src="/plantsciences/wp-content/themes/child_theme/logo.png"/></a></div>
+<div class="logo col-lg-2 col-md-3 col-sm-3 col-xs-12"><a href="http://ag.purdue.edu"><img alt="Purdue University" src="/plantsciences/wp-content/themes/child_theme/logo.png"/></a></div>
 <div class="department col-lg-9 col-md-9 col-sm-9 col-xs-8"><a href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a></div>
 </div>
 </div>

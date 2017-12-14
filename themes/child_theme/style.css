@@ -19,16 +19,7 @@ Version:        0.1.0
   color: #849E2A;
 }
 /* line 4, ../sass/_audienceContent.scss */
-.introContainer {
-  position: relative;
-  background-color: #000;
-  background-image: url("/plantsciences/wp-content/themes/child_theme/plant-sciences-bg.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  text-align: center;
-  overflow: hidden;
-}
+
 /* line 13, ../sass/_audienceContent.scss */
 .introContainer .shader {
   position: absolute;
